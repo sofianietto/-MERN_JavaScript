@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    //*************problema 1**********************//
+
+const cars = ['Tesla', 'Mercedes', 'Honda']
+const [ randomCar ] = cars 
+const [ ,otherRandomCar ] = cars
+//Predict the output
+console.log(randomCar)   //saldrá el primer elemento
+console.log(otherRandomCar)   //saldrá el segundo elemento
+git
+    //*************problema 2**********************//
+
+    const employee = {
+    name: 'Elon',
+    age: 47,
+    company: 'Tesla'
+}
+const { name: otherName } = employee;
+//Predict the output
+console.log(name); //saldrá el nombre de el const employee
+console.log(otherName); //no saldrá nada porque no hay otro nombre en el const
+
+
+    //*************problema 3**********************//
+
+    const person = {
+    name: 'Phil Smith',
+    age: 47,
+    height: '6 feet'
+}
+const password = '12345';
+const { password: hashedPassword } = person;  //error
+//Predict the output
+console.log(password); //saldrá el elemento de el const que sería 12345
+console.log(hashedPassword);// no saldrá nada porque no hay una variable password en el const person
+
+
+    //*************problema 4**********************//
+
+    const numbers = [8, 2, 3, 5, 6, 1, 67, 12, 2];
+const [,first] = numbers;//primer elemento de la cadena "2"
+const [,,,second] = numbers;//tercer elemento de la cadena "5"
+const [,,,,,,,,third] = numbers;//octavo elemento de la cadena "2"
+//Predict the output
+console.log(first == second); //2 = 5, no, entonces false
+console.log(first == third);//2 = 2, si, entonces true
+
+    //*************problema 5**********************//
+
+    const lastTest = {
+    key: 'value',
+    secondKey: [1, 5, 1, 8, 3, 3]
+}
+const { key } = lastTest;
+const { secondKey } = lastTest;
+const [ ,willThisWork] = secondKey;
+//Predict the output
+console.log(key); //saldrá value, pues key es de "lastTest"
+console.log(secondKey);//saldrán todos los elementos del array
+console.log(secondKey[0]);//saldrá "1" ya que ese es el valor en esa posicion del array
+console.log(willThisWork);//saldrá "5" porque indica la posicion 1 del array
+
+
+</script>
+<body>
+    <h1>prueba</h1>
+</body>
+</html>
